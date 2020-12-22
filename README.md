@@ -1,4 +1,4 @@
-# dmenu - dynamic menu
+# Fork of dmenu - dynamic menu
 
 dmenu is an efficient dynamic menu for X.
 
