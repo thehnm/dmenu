@@ -6,11 +6,25 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static const char *fonts[] = {
 	"monospace:style=bold:size=11"
 };
-static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static const char *colors[SchemeLast][2] = {
+static char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+static char col_fg[] = "#c5c8c6";
+static char col_bg[] = "#282828";
+static char col_sel[] = "#768896";
+
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+	{ "col_fg",		STRING, &col_fg },
+	{ "col_bg",		STRING, &col_bg },
+	{ "col_sel",	STRING, &col_sel },
+	{ "prompt",		STRING, &prompt },
+};
+
+static char *colors[SchemeLast][2] = {
 	            /*     fg         bg       */
-	[SchemeNorm] = { "#c5c8c6", "#282828" },
-	[SchemeSel] =  { "#282828", "#768896" },
+	[SchemeNorm] = { col_fg, col_bg },
+	[SchemeSel] =  { col_bg, col_sel },
 	[SchemeOut] =  { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
