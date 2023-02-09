@@ -9,9 +9,9 @@ static const char *fonts[] = {
 	"monospace:style=bold:size=11"
 };
 static char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static char col_fg[] = "#ebdbb2";
-static char col_bg[] = "#282828";
-static char col_sel[] = "#d3869b";
+static char col_fg[] = "#ECEFF4";
+static char col_bg[] = "#2E3440";
+static char col_sel[] = "#81A1C1";
 
 /*
  * Xresources preferences to load at startup
