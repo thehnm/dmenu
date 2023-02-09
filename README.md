@@ -21,3 +21,7 @@ make clean install
 ## Running dmenu
 
 See the man page for details.
+
+## Patches
+
+- [center](https://tools.suckless.org/dmenu/patches/center/)
